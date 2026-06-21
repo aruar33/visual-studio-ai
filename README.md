@@ -45,7 +45,7 @@
 ### Via npm
 
 ```bash
-npm install -g visual-studio
+npm install -g visualstudio-br
 visual-studio onboard
 ```
 
