@@ -17,11 +17,11 @@ export type ChatWelcomeProps = {
   onSend: () => void;
 };
 
-const WELCOME_SUGGESTION_KEYS = [
-  "chat.welcome.suggestions.whatCanYouDo",
-  "chat.welcome.suggestions.summarizeRecentSessions",
-  "chat.welcome.suggestions.configureChannel",
-  "chat.welcome.suggestions.checkSystemHealth",
+const WELCOME_SUGGESTIONS = [
+  "O que você consegue fazer?",
+  "Resuma minhas sessões recentes",
+  "Como configuro um canal de mensagens?",
+  "Verifique a saúde do sistema",
 ];
 
 function resolveAssistantAvatarUrl(
@@ -75,8 +75,7 @@ export function renderWelcomeState(props: ChatWelcomeProps) {
         ${t("chat.welcome.hintAfterShortcut")}
       </p>
       <div class="agent-chat__suggestions">
-        ${WELCOME_SUGGESTION_KEYS.map((key) => {
-          const text = t(key);
+        ${WELCOME_SUGGESTIONS.map((text) => {
           return html`
             <button
               type="button"

@@ -1,11 +1,11 @@
 {
-  "name": "openclaw",
+  "name": "visual-studio",
   "version": "2026.6.9",
   "description": "Multi-channel AI gateway with extensible messaging integrations",
   "keywords": [],
-  "homepage": "https://github.com/openclaw/openclaw#readme",
+  "homepage": "https://www.visualstudio.com.br",
   "bugs": {
-    "url": "https://github.com/openclaw/openclaw/issues"
+    "url": "https://www.visualstudio.com.br"
   },
   "license": "MIT",
   "author": "",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/openclaw/openclaw.git"
   },
   "bin": {
-    "openclaw": "openclaw.mjs"
+    "visual-studio": "openclaw.mjs"
   },
   "directories": {
     "doc": "docs",

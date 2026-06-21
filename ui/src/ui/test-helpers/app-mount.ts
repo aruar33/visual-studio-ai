@@ -4,7 +4,7 @@ import { i18n } from "../../i18n/index.ts";
 import { getSafeLocalStorage, getSafeSessionStorage } from "../../local-storage.ts";
 import { createStorageMock } from "../../test-helpers/storage.ts";
 import "../app.ts";
-import type { OpenClawApp } from "../app.ts";
+import type { VisualStudioApp } from "../app.ts";
 
 class MockWebSocket {
   static CONNECTING = 0;
@@ -43,12 +43,12 @@ function createMatchMediaMock(width: number) {
   });
 }
 
-const mountedApps = new Set<OpenClawApp>();
+const mountedApps = new Set<VisualStudioApp>();
 
 function collectMountedApps() {
-  return new Set<OpenClawApp>([
+  return new Set<VisualStudioApp>([
     ...mountedApps,
-    ...document.querySelectorAll<OpenClawApp>("openclaw-app"),
+    ...document.querySelectorAll<VisualStudioApp>("vs-app"),
   ]);
 }
 
@@ -72,13 +72,13 @@ function nextFrame() {
   });
 }
 
-async function waitForAppUpdates(apps: Iterable<OpenClawApp>) {
+async function waitForAppUpdates(apps: Iterable<VisualStudioApp>) {
   for (const app of apps) {
     await app.updateComplete;
   }
 }
 
-async function drainAppWork(apps: Iterable<OpenClawApp>) {
+async function drainAppWork(apps: Iterable<VisualStudioApp>) {
   const snapshot = [...apps];
   await nextMicrotask();
   await waitForAppUpdates(snapshot);
@@ -105,7 +105,7 @@ async function cleanupMountedApps() {
 
 export function mountApp(pathname: string) {
   window.history.replaceState({}, "", pathname);
-  const app = document.createElement("openclaw-app") as OpenClawApp;
+  const app = document.createElement("vs-app") as VisualStudioApp;
   mountedApps.add(app);
   document.body.append(app);
   app.connected = true;

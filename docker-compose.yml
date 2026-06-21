@@ -1,6 +1,6 @@
 services:
-  openclaw-gateway:
-    image: ${OPENCLAW_IMAGE:-openclaw:local}
+  visual-studio-gateway:
+    image: ${OPENCLAW_IMAGE:-visual-studio:local}
     build: .
     env_file:
       - path: .env
@@ -89,9 +89,9 @@ services:
       retries: 5
       start_period: 20s
 
-  openclaw-cli:
-    image: ${OPENCLAW_IMAGE:-openclaw:local}
-    network_mode: "service:openclaw-gateway"
+  visual-studio-cli:
+    image: ${OPENCLAW_IMAGE:-visual-studio:local}
+    network_mode: "service:visual-studio-gateway"
     env_file:
       - path: .env
         required: false
@@ -126,4 +126,4 @@ services:
     init: true
     entrypoint: ["node", "dist/index.js"]
     depends_on:
-      - openclaw-gateway
+      - visual-studio-gateway

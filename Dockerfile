@@ -148,9 +148,9 @@ RUN --mount=type=cache,id=openclaw-pnpm-store,target=/root/.local/share/pnpm/sto
     node scripts/postinstall-bundled-plugins.mjs && \
     find dist -type f \( -name '*.d.ts' -o -name '*.d.mts' -o -name '*.d.cts' -o -name '*.map' \) -delete && \
     rm -rf \
-      /app/node_modules/openclaw \
-      /app/node_modules/.bin/openclaw \
-      /app/node_modules/.pnpm/openclaw@*/node_modules/openclaw && \
+      /app/node_modules/visual-studio \
+      /app/node_modules/.bin/visual-studio \
+      /app/node_modules/.pnpm/visual-studio@*/node_modules/visual-studio && \
     node scripts/check-package-dist-imports.mjs /app
 
 # ── Runtime base image ──────────────────────────────────────────
@@ -168,11 +168,11 @@ ARG OPENCLAW_BUNDLED_PLUGIN_DIR
 # - docs/install/docker.md ("Base image metadata" section)
 # - https://docs.openclaw.ai/install/docker
 LABEL org.opencontainers.image.source="https://github.com/openclaw/openclaw" \
-  org.opencontainers.image.url="https://openclaw.ai" \
-  org.opencontainers.image.documentation="https://docs.openclaw.ai/install/docker" \
+  org.opencontainers.image.url="https://www.visualstudio.com.br" \
+  org.opencontainers.image.documentation="https://www.visualstudio.com.br" \
   org.opencontainers.image.licenses="MIT" \
-  org.opencontainers.image.title="OpenClaw" \
-  org.opencontainers.image.description="OpenClaw gateway and CLI runtime container image"
+  org.opencontainers.image.title="Visual Studio" \
+  org.opencontainers.image.description="Visual Studio gateway and CLI runtime container image"
 
 WORKDIR /app
 
@@ -301,7 +301,7 @@ RUN --mount=type=cache,id=openclaw-bookworm-apt-cache,target=/var/cache/apt,shar
     fi
 
 # Expose the CLI binary without requiring npm global writes as non-root.
-RUN ln -sf /app/openclaw.mjs /usr/local/bin/openclaw \
+RUN ln -sf /app/openclaw.mjs /usr/local/bin/visual-studio \
  && chmod 755 /app/openclaw.mjs
 
 # Pre-create default named-volume mount points so first-run Docker volumes copy

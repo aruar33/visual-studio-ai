@@ -1,7 +1,7 @@
 {
-  "name": "OpenClaw Control",
-  "short_name": "OpenClaw",
-  "description": "Multi-channel AI gateway control panel",
+  "name": "Visual Studio",
+  "short_name": "Visual Studio",
+  "description": "Assistente de IA pessoal — www.visualstudio.com.br",
   "start_url": "./",
   "display": "standalone",
   "theme_color": "#0a0a0a",

@@ -169,7 +169,7 @@ export function resolveNavigatorLocale(navLang: string): Locale {
   if (navLang.startsWith("fa")) {
     return "fa";
   }
-  return DEFAULT_LOCALE;
+  return "pt-BR";
 }
 
 export async function loadLazyLocaleTranslation(locale: Locale): Promise<TranslationMap | null> {

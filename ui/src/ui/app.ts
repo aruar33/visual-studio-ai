@@ -206,7 +206,7 @@ function resolveOnboardingMode(): boolean {
   return normalized === "1" || normalized === "true" || normalized === "yes" || normalized === "on";
 }
 
-export class OpenClawApp extends LitElement {
+export class VisualStudioApp extends LitElement {
   readonly i18nController = new I18nController(this);
   clientInstanceId = generateUUID();
   connectGeneration = 0;
@@ -1661,6 +1661,6 @@ export class OpenClawApp extends LitElement {
   }
 }
 
-if (!customElements.get("openclaw-app")) {
-  customElements.define("openclaw-app", OpenClawApp);
+if (!customElements.get("vs-app")) {
+  customElements.define("vs-app", VisualStudioApp);
 }
