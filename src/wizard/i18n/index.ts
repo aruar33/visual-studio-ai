@@ -1,5 +1,6 @@
 // Wizard i18n helpers resolve translated onboarding copy by locale.
 import { en } from "./locales/en.js";
+import { pt_BR } from "./locales/pt-BR.js";
 import { zh_CN } from "./locales/zh-CN.js";
 import { zh_TW } from "./locales/zh-TW.js";
 import type {
@@ -17,12 +18,13 @@ export type SetupTranslator = (key: string, params?: WizardI18nParams) => string
 
 const LOCALES: Record<WizardLocale, WizardTranslationMap> = {
   en,
+  "pt-BR": pt_BR,
   "zh-CN": zh_CN,
   "zh-TW": zh_TW,
 };
 
 export const WIZARD_DEFAULT_LOCALE: WizardLocale = "en";
-export const WIZARD_SUPPORTED_LOCALES: readonly WizardLocale[] = ["en", "zh-CN", "zh-TW"];
+export const WIZARD_SUPPORTED_LOCALES: readonly WizardLocale[] = ["en", "pt-BR", "zh-CN", "zh-TW"];
 
 function normalizeLocaleToken(raw: string | undefined): string {
   return (raw ?? "").trim().split(".")[0]?.split("@")[0]?.replaceAll("_", "-") ?? "";
@@ -39,6 +41,9 @@ export function resolveWizardLocale(value: string | undefined): WizardLocale {
   const lower = normalized.toLowerCase();
   if (lower === "en" || lower.startsWith("en-")) {
     return "en";
+  }
+  if (lower === "pt" || lower.startsWith("pt-")) {
+    return "pt-BR";
   }
   if (lower === "zh-tw" || lower === "zh-hk" || lower === "zh-mo" || lower.includes("hant")) {
     return "zh-TW";
