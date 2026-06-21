@@ -18,7 +18,6 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/Licença-MIT-blue.svg?style=for-the-badge" alt="Licença MIT"></a>
   <img src="https://img.shields.io/badge/Node.js-22%2B-green?style=for-the-badge&logo=node.js" alt="Node.js 22+">
   <img src="https://img.shields.io/badge/Interface-PT--BR-009c3b?style=for-the-badge" alt="PT-BR">
   <a href="https://www.visualstudio.com.br"><img src="https://img.shields.io/badge/Site-visualstudio.com.br-3b82f6?style=for-the-badge" alt="Site"></a>
@@ -86,33 +85,22 @@ visual-studio/
 
 ## 🔧 Configuração
 
-O Visual Studio usa um arquivo de configuração em `~/.openclaw/openclaw.json`. Execute o assistente de configuração para criar sua configuração inicial:
+Execute o assistente de configuração para criar sua configuração inicial:
 
 ```bash
 visual-studio onboard
 ```
 
-### Variáveis de ambiente principais
-
-| Variável | Descrição |
-|---|---|
-| `OPENCLAW_GATEWAY_TOKEN` | Token de autenticação do gateway |
-| `OPENCLAW_HOME` | Diretório home do Visual Studio |
-| `OPENCLAW_STATE_DIR` | Diretório de estado e dados |
-| `OPENCLAW_GATEWAY_PORT` | Porta do gateway (padrão: 18789) |
+O assistente vai guiá-lo passo a passo pela configuração do gateway, canais e modelos de IA.
 
 ## 🐳 Deploy com Docker
 
 ```bash
-# Copie o arquivo de exemplo
-cp .env.example .env
-
-# Configure seu token de acesso
-echo "OPENCLAW_GATEWAY_TOKEN=seu-token-aqui" >> .env
-
 # Suba o container
 docker compose up -d
 ```
+
+Configure as variáveis de ambiente no arquivo `.env` antes de subir. O arquivo `docker-compose.yml` documenta todas as opções disponíveis.
 
 ## 🤖 Provedores de IA suportados
 
@@ -123,10 +111,6 @@ docker compose up -d
 ## 📱 Canais de mensagem
 
 WhatsApp · Telegram · Slack · Discord · Signal · iMessage · Microsoft Teams · Google Chat · Matrix · Feishu · LINE · Mattermost · Nextcloud Talk · Synology Chat · IRC · Twitch · e mais
-
-## 📄 Licença
-
-MIT — veja [LICENSE](LICENSE) para detalhes.
 
 ---
 
