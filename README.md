@@ -25,7 +25,7 @@
 
 ---
 
-**Visual Studio** é um gateway de IA pessoal que você instala nos seus próprios servidores. Ele conecta assistentes de inteligência artificial aos canais de mensagem que você já usa, com interface web completa em português brasileiro.
+**Visual Studio** é um gateway de IA pessoal que você instala nos seus próprios servidores. Ele conecta assistentes de inteligência artificial aos canais de mensagem que você já usa, com interface web completa em português brasileiro, a estrutura também é do brasil foi usado o melhor do openclaw e hermes agente, misturando um pouco de robustez de outros projetos, simplificando e melhorando todo desempenho, e atualizado para rodar com LLms inferiores como modelos 4b,8b locais e acima ( via ollama ), sem perder inteligencia.
 
 ## ✨ Funcionalidades
 
