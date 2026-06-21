@@ -1,0 +1,76 @@
+<svg width="200" height="260" viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Antenna -->
+  <rect x="97" y="8" width="6" height="22" rx="3" fill="#60a5fa"/>
+  <circle cx="100" cy="6" r="7" fill="#93c5fd" filter="url(#glow)"/>
+
+  <!-- Head -->
+  <rect x="42" y="28" width="116" height="82" rx="22" fill="url(#bodyGrad)"/>
+
+  <!-- Face screen -->
+  <rect x="56" y="42" width="88" height="54" rx="12" fill="url(#faceGrad)"/>
+
+  <!-- Eyes -->
+  <circle cx="78" cy="64" r="10" fill="#60a5fa" filter="url(#glow)"/>
+  <circle cx="122" cy="64" r="10" fill="#60a5fa" filter="url(#glow)"/>
+  <circle cx="78" cy="64" r="5" fill="#ffffff"/>
+  <circle cx="122" cy="64" r="5" fill="#ffffff"/>
+  <circle cx="80" cy="62" r="2" fill="#1e3a8a"/>
+  <circle cx="124" cy="62" r="2" fill="#1e3a8a"/>
+
+  <!-- Mouth / smile -->
+  <path d="M82 82 Q100 94 118 82" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Ears / bolts -->
+  <rect x="30" y="50" width="14" height="24" rx="7" fill="#2563eb"/>
+  <rect x="156" y="50" width="14" height="24" rx="7" fill="#2563eb"/>
+
+  <!-- Neck -->
+  <rect x="88" y="108" width="24" height="14" rx="4" fill="#2563eb"/>
+
+  <!-- Body -->
+  <rect x="34" y="120" width="132" height="90" rx="20" fill="url(#bodyGrad)"/>
+
+  <!-- VS logo on chest -->
+  <rect x="64" y="136" width="72" height="56" rx="10" fill="#1e3a8a"/>
+  <text x="100" y="175" font-family="system-ui,-apple-system,sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-1">VS</text>
+
+  <!-- Body bolts -->
+  <circle cx="52" cy="138" r="5" fill="#60a5fa"/>
+  <circle cx="148" cy="138" r="5" fill="#60a5fa"/>
+  <circle cx="52" cy="192" r="5" fill="#60a5fa"/>
+  <circle cx="148" cy="192" r="5" fill="#60a5fa"/>
+
+  <!-- Arms -->
+  <rect x="6" y="124" width="30" height="70" rx="15" fill="#2563eb"/>
+  <rect x="164" y="124" width="30" height="70" rx="15" fill="#2563eb"/>
+
+  <!-- Hands -->
+  <circle cx="21" cy="202" r="12" fill="#3b82f6"/>
+  <circle cx="179" cy="202" r="12" fill="#3b82f6"/>
+
+  <!-- Legs -->
+  <rect x="56" y="208" width="36" height="46" rx="12" fill="#2563eb"/>
+  <rect x="108" y="208" width="36" height="46" rx="12" fill="#2563eb"/>
+
+  <!-- Feet -->
+  <rect x="46" y="244" width="50" height="16" rx="8" fill="#1d4ed8"/>
+  <rect x="104" y="244" width="50" height="16" rx="8" fill="#1d4ed8"/>
+</svg>

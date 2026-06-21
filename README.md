@@ -1,16 +1,11 @@
-# Visual Studio — Assistente de IA Pessoal
+<p align="center">
+  <img src="https://img.shields.io/badge/🤖%20POWERED%20BY%20AI-Visual%20Studio-3b82f6?style=for-the-badge&labelColor=1e3a8a" alt="Powered by AI"/>
+</p>
+
+<h1 align="center">Visual Studio — Assistente de IA Pessoal</h1>
 
 <p align="center">
-  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="120" height="120" rx="24" fill="url(#vs-g)"/>
-    <defs>
-      <linearGradient id="vs-g" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#3b82f6"/>
-        <stop offset="100%" stop-color="#1d4ed8"/>
-      </linearGradient>
-    </defs>
-    <text x="60" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-2">VS</text>
-  </svg>
+  <img src="./mascot.svg" alt="Visual Studio Mascote" width="160"/>
 </p>
 
 <p align="center">
@@ -20,7 +15,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-22%2B-green?style=for-the-badge&logo=node.js" alt="Node.js 22+">
   <img src="https://img.shields.io/badge/Interface-PT--BR-009c3b?style=for-the-badge" alt="PT-BR">
-  <a href="https://www.visualstudio.com.br"><img src="https://img.shields.io/badge/Site-visualstudio.com.br-3b82f6?style=for-the-badge" alt="Site"></a>
+  <img src="https://img.shields.io/badge/IA-Local%20%26%20Nuvem-3b82f6?style=for-the-badge&logo=openai&logoColor=white" alt="IA Local & Nuvem">
+  <a href="https://www.visualstudio.com.br"><img src="https://img.shields.io/badge/Site-visualstudio.com.br-1d4ed8?style=for-the-badge" alt="Site"></a>
 </p>
 
 ---
